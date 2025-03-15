@@ -4,7 +4,7 @@ import {Link as RouterLink} from "react-router-dom";
 import AuthIndex from "@/pages/auth/index.jsx";
 import {Box, Button, Center, Field, Flex, Heading, Stack, Text} from "@chakra-ui/react";
 import {UserPlus} from "lucide-react";
-import CustomInput from "@/components/shared/inputs/CustomInput.jsx";
+import {AuthInput} from "@/components/shared/inputs/CustomInput.jsx";
 import {Link as ChakraLink} from "@chakra-ui/react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -65,7 +65,7 @@ catch (err) {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Stack mt={10}>
                     <Field.Root>
-                        <CustomInput
+                        <AuthInput
                             type="email"
                             register={register}
                             name="email"
@@ -74,7 +74,7 @@ catch (err) {
                         />
                     </Field.Root>
 
-                    <CustomInput
+                    <AuthInput
                         type={showPassword ? "text" : "password"}
                         register={register}
                         name="password"
@@ -83,7 +83,7 @@ catch (err) {
                         showPassword={showPassword}
                         togglePasswordVisibility={() => setShowPassword(!showPassword)}
                     />
-                    <CustomInput
+                    <AuthInput
                         type={showPassword ? "text" : "password"}
                         register={register}
                         name="confirm"

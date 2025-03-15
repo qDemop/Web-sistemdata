@@ -19,7 +19,7 @@ import { Link as ChakraLink } from "@chakra-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { loginSchema } from "@/lib/validators.js";
-import CustomInput from "@/components/shared/inputs/CustomInput.jsx";
+import {AuthInput} from "@/components/shared/inputs/CustomInput.jsx";
 
 
 const Login = () => {
@@ -79,7 +79,7 @@ const Login = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Stack mt={10}>
                     <Field.Root>
-                        <CustomInput
+                        <AuthInput
                             type="email"
                             register={register}
                             name="email"
@@ -88,7 +88,7 @@ const Login = () => {
                         />
                     </Field.Root>
 
-                    <CustomInput
+                    <AuthInput
                         type={showPassword ? "text" : "password"}
                         register={register}
                         name="password"
