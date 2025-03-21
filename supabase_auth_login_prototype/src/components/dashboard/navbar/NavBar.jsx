@@ -83,7 +83,6 @@ const NavBar = () => {
                 <NotyfIco/>
                 <Button variant={{base:"plain", md:"outline"}} bg="red.muted" borderColor="red.solid" size={"sm"}
                         onClick={singOut}
-                        p
                 >
                     <Icon as={GoSignOut} size="sm" />
                     {showText && <Text>Salir</Text>}
