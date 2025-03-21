@@ -1,5 +1,6 @@
 import supabase from "../../api/supabaseClient.js";
 import { useNavigate, Link } from "react-router-dom"
+import {Box} from "@chakra-ui/react";
 
 
 function Dashboard() {
@@ -11,12 +12,12 @@ function Dashboard() {
         navigate("/login");
     }
 
-    return <div>
+    return <Box >
         <h1>Hello, you are logged in.</h1>
         <Link to="/profile">Actualiza tus datos de Perfil</Link>
         <br></br>
         <button onClick={singOut}>Sign out</button>
-    </div>
+    </Box>
 
 }
 

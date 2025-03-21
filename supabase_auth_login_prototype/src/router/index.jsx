@@ -13,6 +13,7 @@ import ProfileForm from "@/pages/profile/ProfileForm.jsx";
 import NotFound from "@/pages/errors/NotFound.jsx";
 import {DashboardLayout} from "@/layouts/admin/DashboardLayout.jsx";
 import Login from "@/pages/auth/Login.jsx";
+import Administracion from "@/pages/dashboard/Administracion.jsx";
 
 export const router = createBrowserRouter([
     {path:"/", element: <Home/>},
@@ -35,7 +36,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "administracion",
-                element: <h1>Administracion</h1>,
+                element: <Administracion/>,
             },
             {
                 path: "usuarios",

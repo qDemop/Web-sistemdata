@@ -1,46 +1,49 @@
 
 import {TbLayoutDashboardFilled} from "react-icons/tb";
-import {FaUsers, FaUsersCog} from "react-icons/fa";
-import {FiDatabase} from "react-icons/fi";
-import {MdCalendarToday, MdOutlineSupervisorAccount} from "react-icons/md";
-
+import {FaUsers, FaUsersCog, FaCogs, FaList    } from "react-icons/fa";
+import { FaSatelliteDish } from "react-icons/fa6";
 
 export const dashboardLinks = [
     {
         type: "link",
         label: "Dashboard",
-        title: "Dashboard",
+        title: "Bienvenido",
         icon: TbLayoutDashboardFilled,
         path: "dashboard",
     },
     {
         type: "link",
         label: "Administración",
+        title: "Administración",
         icon: FaUsersCog,
         path: "administracion",
     },
     {
         type: "link",
         label: "Usuarios",
+        title: "Usuarios",
         icon: FaUsers,
         path: "usuarios",
     },
     {
         type: "link",
         label: "Sensores",
-        icon: FiDatabase,
+        title: "Sensores",
+        icon: FaSatelliteDish  ,
         path: "sensores",
     },
     {
         type: "link",
         label: "Reportes",
-        icon: MdCalendarToday,
+        title: "Reportes",
+        icon: FaList,
         path: "reportes",
     },
     {
         type: "link",
         label: "Configuración",
-        icon: MdOutlineSupervisorAccount,
+        title: "Configuración",
+        icon: FaCogs,
         path: "configuracion",
     },
 
