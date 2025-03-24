@@ -48,3 +48,40 @@ export const dashboardLinks = [
     },
 
 ];
+
+export const homeLinks = [
+    {
+        label: "Home",
+        uri: "#",
+    },
+    {
+        label: "Sobre Nosotros",
+        uri: "#",
+    },
+    {
+        label: "Articulos",
+        uri: "#",
+        subitems: [
+            {
+                label: "React",
+                uri: "#",
+            },
+            {
+                label: "JavaScript",
+                uri: "#",
+            },
+            {
+                label: "Next.js",
+                uri: "#",
+            },
+        ],
+    },
+    {
+        label: "Contact",
+        uri: "#",
+    },
+    // {
+    //     label: "Nuestra Mision",
+    //     uri: "#",
+    // },
+]
