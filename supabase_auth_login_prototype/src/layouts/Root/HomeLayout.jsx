@@ -1,12 +1,13 @@
-import {HStack, useDisclosure, VStack} from "@chakra-ui/react";
+import {Flex} from "@chakra-ui/react";
+import {NavbarHo} from "@/components/Home/header/NavBar.jsx";
+import Home from "@/pages/home/Home.jsx";
 
 
-export function Navbar() {
-    const { isOpen, onToggle } = useDisclosure();
+export function HomeLayout() {
 
     return (
-        <VStack w="full" spacing={0}>
-            <Navbar />
-        </VStack>
+        <Flex w="full" spacing={0}>
+            <NavbarHo />
+        </Flex>
     );
 }

@@ -19,9 +19,11 @@ import Dash from "@/pages/dashboard/public/Dash.jsx";
 import Sensores from "@/pages/dashboard/public/Sensores.jsx";
 import Historial from "@/pages/dashboard/public/Historial.jsx";
 import Soporte from "@/pages/dashboard/public/Soporte.jsx";
+import {HomeLayout} from "@/layouts/Root/HomeLayout.jsx";
 
 export const router = createBrowserRouter([
-    {path:"/", element: <Home/>},
+    // {path:"/", element: <Home/>},
+    {path:"/", element: <HomeLayout/>},
     {path:"/login", element: <Login/>},
     {path:"/register", element: <Register/>},
     {path:"/verify-email", element: <VerifyEmail/>},

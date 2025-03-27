@@ -1,68 +1,125 @@
-import {Avatar, Flex, Heading, IconButton, Input, InputGroup, List} from "@chakra-ui/react";
+import {
+    Avatar,
+    Button,
+    Flex,
+    Heading,
+    IconButton,
+    Input,
+    InputGroup,
+    List,
+    Skeleton,
+    ClientOnly, Icon, Link
+} from "@chakra-ui/react";
 import { FaBurger } from "react-icons/fa6";
 import {FaBell, FaSearch} from "react-icons/fa";
 import PropTypes from "prop-types";
 import {NavItems} from "@/components/Home/header/NavItems.jsx";
+import {NavLink} from "react-router-dom";
+import { useColorMode} from "@/components/ui/color-mode.jsx";
+import {BsMoonStars, BsSun} from "react-icons/bs";
 
 
-export function LeftContent ({ items, onToggle }) {
+export function LeftContent ({items, onToggle}) {
     return (
         <Flex alignItems="center" justifyContent="space-between" gap={4}>
             <IconButton
                 aria-label="menu"
-                colorScheme="teal"
+                size="sm"
+                colorPalette="teal"
                 variant="ghost"
-                icon={<FaBurger />}
                 rounded="full"
-                display={{ base: "flex", md: "none" }}
+                display={{base: "flex", md: "none"}}
                 onClick={onToggle}
-            />
+            >
+                <FaBurger/>
+            </IconButton>
 
-            <Heading color="teal" fontWeight="black">
-                D2C
+            <Heading as={NavLink} to="/" color="teal" fontWeight="black">
+                LO2GO
             </Heading>
-
-            <List gap={2} display={{ base: "none", md: "flex" }}>
+            <List.Root
+                variant="plain"
+                flexDirection="row"
+                gap={2}
+                display={{base: "none", md: "flex"}}>
                 {items.map((item) => (
                     <NavItems key={item.label} {...item} />
                 ))}
-            </List>
+            </List.Root>
         </Flex>
     );
 }
 
 export function RightContent () {
+    const { toggleColorMode, colorMode } = useColorMode()
     return (
 
         <Flex alignItems="center" gap={2}>
             <IconButton
                 aria-label="search"
-                icon={<FaSearch />}
                 variant="ghost"
-                colorScheme="teal"
-                display={{ base: "flex", md: "none" }}
                 rounded="full"
+                display={{ base: "flex", md: "none" }}
                 size="sm"
-            />
-            <InputGroup startElement={<FaSearch color="teal" />} size="sm" display={{ base: "none", md: "flex" }}>
-                <Input variant="filled" placeholder="Search..." />
+            >
+                <FaSearch color="teal"/>
+            </IconButton>
+            <InputGroup
+                colorPalette="teal"
+                size="md"
+                endElement={<Icon as={FaSearch} color="teal.fg"/>}
+                display={{ base: "none", md: "flex" }}
+            >
+                <Input color="teal.fg" variant="subtle" placeholder="Search..." _placeholder={{ color: "teal.solid" }} />
             </InputGroup>
-
             <IconButton
                 aria-label="search"
-                icon={<FaBell />}
                 variant="ghost"
-                colorScheme="teal"
                 rounded="full"
                 size="sm"
-            />
-
-            <Avatar size="sm" name="D C" bg="teal" />
+                colorPalette="teal"
+            >
+                <FaBell/>
+            </IconButton>
+            <ClientOnly fallback={<Skeleton boxSize="8" />}>
+                <IconButton onClick={toggleColorMode} variant="ghost" size="sm" colorPalette="teal"
+                            rounded="full"
+                >
+                    {colorMode === "light" ? <BsSun/> : <BsMoonStars/>}
+                </IconButton>
+            </ClientOnly>
+            <Button
+                as={Link}
+                href="/login"
+                variant="solid"
+                colorPalette="teal"
+                size={"sm"}
+                borderRadius="2xl"
+                textDecoration="none"
+                display={{ base: "none", md: "flex" }}
+            >
+                Iniciar Sesión
+            </Button>
+            <Button
+                as={Link}
+                href="/register"
+                variant="outline"
+                colorPalette="teal"
+                size={"sm"}
+                borderRadius="2xl"
+                textDecoration="none"
+                display={{ base: "none", md: "flex" }}
+            >
+                Registrarse
+            </Button>
+            <Avatar.Root colorPalette="teal" size="sm">
+                <Avatar.Fallback name="Shane Nelson"/>
+            </Avatar.Root>
         </Flex>
     )
 };
 
 LeftContent.propTypes = {
     items: PropTypes.array.isRequired,
-    onToggle: PropTypes.func.isRequired,
+    onToggle: PropTypes.func.isRequired
 };

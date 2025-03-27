@@ -44,7 +44,7 @@ export const AdminDashboardLayout = () => {
     >
         <NavBar/>
         <Banner/>
-        <Box flex="1" >
+        <Box flex="1" w="full">
             <Outlet/>
         </Box>
 

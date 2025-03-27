@@ -105,12 +105,12 @@ export const DashInput = ({
 
 }) => {
     return(
-        <Field.Root invalid={!!errors[name]}>
-            <Field.Label>
+        <Field.Root invalid={!!errors[name]} w="full" >
+            <Field.Label fontWeight="normal" textStyle="sm" >
                 {label} <Field.RequiredIndicator/>
             </Field.Label>
-            <InputGroup startElement={<Icon as={icon} variant="ghost"/>}>
-                <Input placeholder={placeholder} {...register(name)}/>
+            <InputGroup startElement={<Icon as={icon} variant="ghost" size="sm" />}>
+                <Input placeholder={placeholder} {...register(name)} rounded="lg"/>
             </InputGroup>
             <FieldErrorText color="#FF6B6B">{errors[name]?.message}</FieldErrorText>
         </Field.Root>
