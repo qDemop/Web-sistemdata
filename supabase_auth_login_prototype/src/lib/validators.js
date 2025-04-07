@@ -44,5 +44,7 @@ export const adminsSchema = z.object({
         .email("El correo electrónico es requerido")
         .regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,'Correo electrónico no válido'),
     rol: z.string()
-        .nonempty("Designe un Rol")
+        .nonempty("Designe un Rol").array(),
 });
+
+export const sensorSchema = z.object({})

@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 export function NavBarMob({ items, isOpen }) {
     return (
         <Collapsible.Root  style={{width: "100%"}} open={isOpen} >
-            <Collapsible.Content >
+            <Collapsible.Content>
                 <List.Root
                     gap={2}
                     spacing={2}
@@ -15,6 +15,7 @@ export function NavBarMob({ items, isOpen }) {
                     padding={2}
                     bg="bg.muted"
                     variant="plain"
+                    display={{base: "flex", md: "none"}}
                 >
                     {items.map((item) => (
                         <NavItemsMob key={item.label} {...item} />
@@ -31,7 +32,7 @@ export function NavBarMob({ items, isOpen }) {
                     </Button>
                     <Button
                         as={NavLink}
-                        to="/login"
+                        to="/register"
                         variant="outline"
                         colorPalette="teal"
                         size={"sm"}

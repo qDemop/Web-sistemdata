@@ -51,33 +51,33 @@ export const dashboardLinks = [
 
 export const homeLinks = [
     {
-        label: "Home",
+        label: "Inicio",
         uri: "#",
     },
     {
-        label: "Sobre Nosotros",
+        label: "Datos Recogidos",
         uri: "#",
     },
     {
-        label: "Articulos",
+        label: "Nosotros",
         uri: "#",
         subitems: [
             {
-                label: "React",
+                label: "Developers",
                 uri: "#",
             },
             {
-                label: "JavaScript",
+                label: "Misión",
                 uri: "#",
             },
             {
-                label: "Next.js",
+                label: "Visión",
                 uri: "#",
             },
         ],
     },
     {
-        label: "Contact",
+        label: "Contacto",
         uri: "#",
     },
     // {

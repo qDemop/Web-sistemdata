@@ -34,7 +34,7 @@ export function LeftContent ({items, onToggle}) {
                 <FaBurger/>
             </IconButton>
 
-            <Heading as={NavLink} to="/" color="teal" fontWeight="black">
+            <Heading as={NavLink} to="/" colorPalette="teal" fontWeight="black">
                 LO2GO
             </Heading>
             <List.Root
@@ -55,32 +55,32 @@ export function RightContent () {
     return (
 
         <Flex alignItems="center" gap={2}>
-            <IconButton
-                aria-label="search"
-                variant="ghost"
-                rounded="full"
-                display={{ base: "flex", md: "none" }}
-                size="sm"
-            >
-                <FaSearch color="teal"/>
-            </IconButton>
-            <InputGroup
-                colorPalette="teal"
-                size="md"
-                endElement={<Icon as={FaSearch} color="teal.fg"/>}
-                display={{ base: "none", md: "flex" }}
-            >
-                <Input color="teal.fg" variant="subtle" placeholder="Search..." _placeholder={{ color: "teal.solid" }} />
-            </InputGroup>
-            <IconButton
-                aria-label="search"
-                variant="ghost"
-                rounded="full"
-                size="sm"
-                colorPalette="teal"
-            >
-                <FaBell/>
-            </IconButton>
+            {/*<IconButton*/}
+            {/*    aria-label="search"*/}
+            {/*    variant="ghost"*/}
+            {/*    rounded="full"*/}
+            {/*    display={{ base: "flex", md: "none" }}*/}
+            {/*    size="sm"*/}
+            {/*>*/}
+            {/*    <FaSearch color="teal"/>*/}
+            {/*</IconButton>*/}
+            {/*<InputGroup*/}
+            {/*    colorPalette="teal"*/}
+            {/*    size="md"*/}
+            {/*    endElement={<Icon as={FaSearch} color="teal.fg"/>}*/}
+            {/*    display={{ base: "none", md: "flex" }}*/}
+            {/*>*/}
+            {/*    <Input color="teal.fg" variant="subtle" placeholder="Search..." _placeholder={{ color: "teal.solid" }} />*/}
+            {/*</InputGroup>*/}
+            {/*<IconButton*/}
+            {/*    aria-label="search"*/}
+            {/*    variant="ghost"*/}
+            {/*    rounded="full"*/}
+            {/*    size="sm"*/}
+            {/*    colorPalette="teal"*/}
+            {/*>*/}
+            {/*    <FaBell/>*/}
+            {/*</IconButton>*/}
             <ClientOnly fallback={<Skeleton boxSize="8" />}>
                 <IconButton onClick={toggleColorMode} variant="ghost" size="sm" colorPalette="teal"
                             rounded="full"
@@ -112,9 +112,9 @@ export function RightContent () {
             >
                 Registrarse
             </Button>
-            <Avatar.Root colorPalette="teal" size="sm">
-                <Avatar.Fallback name="Shane Nelson"/>
-            </Avatar.Root>
+            {/*<Avatar.Root colorPalette="teal" size="sm">*/}
+            {/*    <Avatar.Fallback name="Shane Nelson"/>*/}
+            {/*</Avatar.Root>*/}
         </Flex>
     )
 };
