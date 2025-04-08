@@ -1,13 +1,15 @@
-import {Flex} from "@chakra-ui/react";
+import {Flex, Box} from "@chakra-ui/react";
 import {NavbarHo} from "@/components/Home/header/NavBar.jsx";
-import Home from "@/pages/home/Home.jsx";
-
+import {Footer} from "@/components/Home/footer/Footer.jsx"
+import {Outlet} from "react-router-dom"
 
 export function HomeLayout() {
 
     return (
-        <Flex w="full" spacing={0}>
+        <Flex w="full" h="full" spacing={0} display="flex" flexDirection="column">
             <NavbarHo />
+            <Outlet/>
+            <Footer  />
         </Flex>
     );
 }

@@ -21,11 +21,25 @@ import Soporte from "@/pages/dashboard/public/Soporte.jsx";
 import {HomeLayout} from "@/layouts/Root/HomeLayout.jsx";
 import Sensores from "@/pages/dashboard/public/Sensores.jsx";
 import SensoresAd from "@/pages/dashboard/admin/Sensores.jsx";
+import {AboutUsPage} from "@/pages/home/nosotros/AboutUs.jsx";
 
 
 export const router = createBrowserRouter([
-    // {path:"/", element: <Home/>},
-    {path:"/", element: <HomeLayout/>},
+    //Home Layout
+    {
+        path:"/",
+        element: <HomeLayout/>,
+        children:[
+            {
+                index: true,
+                element: <Navigate to='/'/>,
+            },
+            {
+            path: "nosotros",
+            element: <AboutUsPage />
+    }]
+
+    },
     {path:"/login", element: <Login/>},
     {path:"/register", element: <Register/>},
     {path:"/verify-email", element: <VerifyEmail/>},
