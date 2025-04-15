@@ -60,7 +60,7 @@ export function NavItems ({label, uri, subitems}) {
             <Button
                 as={NavLink}
                 to={uri}
-                colorPalette="teal"
+                color={{base:"#072C51", _dark:"#C9EF26"}}
                 variant="ghost"
                 _active={{color:"colorPalette.500", transform: "scale(0.95)"}}
                 _hover={{textDecoration: 'none', bg:'colorPalette.50'}}

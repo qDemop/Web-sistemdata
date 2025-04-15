@@ -8,7 +8,8 @@ import {
     InputGroup,
     List,
     Skeleton,
-    ClientOnly, Icon, Link
+    ClientOnly, Icon, Link, Image,
+    Box
 } from "@chakra-ui/react";
 import { FaBurger } from "react-icons/fa6";
 import {FaBell, FaSearch} from "react-icons/fa";
@@ -21,11 +22,11 @@ import {BsMoonStars, BsSun} from "react-icons/bs";
 
 export function LeftContent ({items, onToggle}) {
     return (
-        <Flex alignItems="center" justifyContent="space-between" gap={4}>
+        <Flex alignItems="center" justifyContent="space-between" gap={2}>
             <IconButton
                 aria-label="menu"
                 size="sm"
-                colorPalette="teal"
+                color="#C9EF26"
                 variant="ghost"
                 rounded="full"
                 display={{base: "flex", md: "none"}}
@@ -34,9 +35,11 @@ export function LeftContent ({items, onToggle}) {
                 <FaBurger/>
             </IconButton>
 
-            <Heading as={NavLink} to="/" colorPalette="teal" fontWeight="black">
-                LO2GO
-            </Heading>
+            <Box as={NavLink} to="/">
+                <Image src="/logopage.svg" alt="Logo" width={{base:"60px", md:"70px"}} />
+            </Box>
+
+
             <List.Root
                 variant="plain"
                 flexDirection="row"
@@ -82,7 +85,7 @@ export function RightContent () {
             {/*    <FaBell/>*/}
             {/*</IconButton>*/}
             <ClientOnly fallback={<Skeleton boxSize="8" />}>
-                <IconButton onClick={toggleColorMode} variant="ghost" size="sm" colorPalette="teal"
+                <IconButton onClick={toggleColorMode} variant="ghost" size="sm" color={{base:"#072C51", _dark:"#C9EF26"}}
                             rounded="full"
                 >
                     {colorMode === "light" ? <BsSun/> : <BsMoonStars/>}
@@ -92,11 +95,13 @@ export function RightContent () {
                 as={Link}
                 href="/login"
                 variant="solid"
-                colorPalette="teal"
+                bg={"#C9EF26"}
+                color="#072C51"
                 size={"sm"}
                 borderRadius="2xl"
                 textDecoration="none"
                 display={{ base: "none", md: "flex" }}
+                _hover={{bg:"#e7f6a4"}}
             >
                 Iniciar Sesión
             </Button>
@@ -104,13 +109,16 @@ export function RightContent () {
                 as={Link}
                 href="/register"
                 variant="outline"
-                colorPalette="teal"
+                borderWidth="2px"
+                borderColor={"#C9EF26"}
+                color={{base:"#072C51", _dark:"#C9EF26"}}
+
                 size={"sm"}
                 borderRadius="2xl"
                 textDecoration="none"
                 display={{ base: "none", md: "flex" }}
             >
-                Registrarse
+                Registrate
             </Button>
             {/*<Avatar.Root colorPalette="teal" size="sm">*/}
             {/*    <Avatar.Fallback name="Shane Nelson"/>*/}

@@ -32,10 +32,8 @@ const AuthIndex = ({ children }) => {
             minH="100vh"
             overflow="hidden"
             position="relative"
-            bgGradient={[
-                "none",
-                "linear-gradient(135deg, #C9EF26 0%, #00B5BB 50% , #072C51 100%)",
-            ]}
+            bgGradient={
+                "linear-gradient(135deg, #C9EF26 0%, #00B5BB 50% , #072C51 100%)"}
 
         >
             {/* Partículas animadas */}
@@ -72,11 +70,12 @@ const AuthIndex = ({ children }) => {
                     width="100%"
                     maxWidth="400px"
                     p={8}
-                    borderRadius="xl"
-                    bg="rgba(0, 51, 140, 0.25)"
-                    backdropFilter={{ base: "none", md: "none", lg: "blur(20px)" }}
+                    borderRadius={{base:"2xl", md:"3xl"}}
+                    borderWidth="2px"
+                    borderColor="white/50"
+                    bg="#072C51/50"
+                    backdropFilter="blur(20px)"
                     boxShadow="0 8px 32px 0 rgba(0, 0, 0, 0.37)"
-                    border="1px solid rgba(39, 174, 96, 0.2)"
                 >
                     {children}
                 </Box>

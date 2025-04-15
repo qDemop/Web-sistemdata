@@ -11,7 +11,8 @@ import {
     Stack,
     Center,
     Flex,
-    Field
+    Field,
+    Image
 } from "@chakra-ui/react";
 import { Mail } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
@@ -61,7 +62,7 @@ const Login = () => {
                     borderRadius="full"
                     mb={1.5}
                 >
-                    <Mail size={55} color="#2ECC71" />
+                    <Image src="/logoauth.svg" alt="Logo" htmlWidth="150px" />
                 </Box>
                 <Heading
                     as="h2"
@@ -103,7 +104,7 @@ const Login = () => {
                         size="lg"
                         bg="#98cc3b"
                         isLoading={loading}
-                        _hover={{ bg: "#2ECC71" }}
+                        _hover={{ bg: "#bddf1c" }}
                         _active={{ bg: "#25A65B" }}
                         color="white"
                         fontSize="md"

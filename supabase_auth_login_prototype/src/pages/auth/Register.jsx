@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth.js";
 import {Link as RouterLink} from "react-router-dom";
 import AuthIndex from "@/pages/auth/index.jsx";
-import {Box, Button, Center, Field, Flex, Heading, Stack, Text} from "@chakra-ui/react";
+import {Box, Button, Center, Field, Flex, Heading, Image, Stack, Text} from "@chakra-ui/react";
 import {UserPlus} from "lucide-react";
 import {AuthInput} from "@/components/shared/inputs/CustomInput.jsx";
 import {Link as ChakraLink} from "@chakra-ui/react";
@@ -47,7 +47,7 @@ catch (err) {
                     borderRadius="full"
                     mb={1.5}
                 >
-                    <UserPlus size={55} color="#2ECC71" />
+                    <Image src="/logoauth.svg" alt="Logo" htmlWidth="150px" />
                 </Box>
                 <Heading
                     as="h2"
@@ -96,9 +96,9 @@ catch (err) {
                         type="submit"
                         w="full"
                         size="lg"
-                        bg="#27AE60"
+                        bg="#98cc3b"
                         isLoading={loading}
-                        _hover={{ bg: "#2ECC71" }}
+                        _hover={{ bg: "#bddf1c" }}
                         _active={{ bg: "#25A65B" }}
                         color="white"
                         fontSize="md"
