@@ -26,7 +26,7 @@ export function LeftContent ({items, onToggle}) {
             <IconButton
                 aria-label="menu"
                 size="sm"
-                color="#C9EF26"
+                color={{base:"#072C51", _dark:"#C9EF26"}}
                 variant="ghost"
                 rounded="full"
                 display={{base: "flex", md: "none"}}
@@ -58,32 +58,6 @@ export function RightContent () {
     return (
 
         <Flex alignItems="center" gap={2}>
-            {/*<IconButton*/}
-            {/*    aria-label="search"*/}
-            {/*    variant="ghost"*/}
-            {/*    rounded="full"*/}
-            {/*    display={{ base: "flex", md: "none" }}*/}
-            {/*    size="sm"*/}
-            {/*>*/}
-            {/*    <FaSearch color="teal"/>*/}
-            {/*</IconButton>*/}
-            {/*<InputGroup*/}
-            {/*    colorPalette="teal"*/}
-            {/*    size="md"*/}
-            {/*    endElement={<Icon as={FaSearch} color="teal.fg"/>}*/}
-            {/*    display={{ base: "none", md: "flex" }}*/}
-            {/*>*/}
-            {/*    <Input color="teal.fg" variant="subtle" placeholder="Search..." _placeholder={{ color: "teal.solid" }} />*/}
-            {/*</InputGroup>*/}
-            {/*<IconButton*/}
-            {/*    aria-label="search"*/}
-            {/*    variant="ghost"*/}
-            {/*    rounded="full"*/}
-            {/*    size="sm"*/}
-            {/*    colorPalette="teal"*/}
-            {/*>*/}
-            {/*    <FaBell/>*/}
-            {/*</IconButton>*/}
             <ClientOnly fallback={<Skeleton boxSize="8" />}>
                 <IconButton onClick={toggleColorMode} variant="ghost" size="sm" color={{base:"#072C51", _dark:"#C9EF26"}}
                             rounded="full"
@@ -112,7 +86,6 @@ export function RightContent () {
                 borderWidth="2px"
                 borderColor={"#C9EF26"}
                 color={{base:"#072C51", _dark:"#C9EF26"}}
-
                 size={"sm"}
                 borderRadius="2xl"
                 textDecoration="none"

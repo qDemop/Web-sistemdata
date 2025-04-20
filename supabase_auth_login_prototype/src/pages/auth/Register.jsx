@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth.js";
-import {Link as RouterLink} from "react-router-dom";
+import {Link as RouterLink, NavLink} from "react-router-dom";
 import AuthIndex from "@/pages/auth/index.jsx";
 import {Box, Button, Center, Field, Flex, Heading, Image, Stack, Text} from "@chakra-ui/react";
 import {UserPlus} from "lucide-react";
@@ -43,6 +43,8 @@ catch (err) {
                 direction="column"
                 align="center">
                 <Box
+                    as={NavLink}
+                    to="/"
                     p={3}
                     borderRadius="full"
                     mb={1.5}
@@ -62,7 +64,7 @@ catch (err) {
                     Únete a nuestra plataforma y conoce nuestra data completa
                 </Text>
             </Flex>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} noValidate>
                 <Stack mt={10}>
                     <Field.Root>
                         <AuthInput
@@ -111,7 +113,7 @@ catch (err) {
                             ¿Ya tienes una cuenta?{" "}
                             <ChakraLink
                                 as={RouterLink}
-                                to="/Login"
+                                to="/login"
                                 color="#2ECC71"
                                 _hover={{ color: "#27AE60" }}
                                 transition="color 0.2s"

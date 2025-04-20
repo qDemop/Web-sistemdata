@@ -6,7 +6,7 @@ import {Outlet} from "react-router-dom"
 export function HomeLayout() {
 
     return (
-        <Flex w="full" h="full" spacing={0} display="flex" flexDirection="column">
+        <Flex w="full"  minH="100dvh" spacing={0} display="grid" gridTemplateRows="auto 1fr auto" flexDirection="column">
             <NavbarHo />
             <Outlet/>
             <Footer  />

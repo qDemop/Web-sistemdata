@@ -22,6 +22,7 @@ import {HomeLayout} from "@/layouts/Root/HomeLayout.jsx";
 import Sensores from "@/pages/dashboard/public/Sensores.jsx";
 import SensoresAd from "@/pages/dashboard/admin/Sensores.jsx";
 import {AboutUsPage} from "@/pages/home/nosotros/AboutUs.jsx";
+import { Contacto } from "@/pages/home/Contacto.jsx";
 
 
 export const router = createBrowserRouter([
@@ -37,7 +38,12 @@ export const router = createBrowserRouter([
             {
             path: "nosotros",
             element: <AboutUsPage />
-    }]
+    },
+            {
+                path: "contacto",
+                element: <Contacto />
+            }
+            ]
 
     },
     {path:"/login", element: <Login/>},

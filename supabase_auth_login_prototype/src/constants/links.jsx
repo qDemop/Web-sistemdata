@@ -55,15 +55,15 @@ export const dashboardLinks = [
 export const homeLinks = [
     {
         label: "Inicio",
-        uri: "#",
+        uri: "/",
     },
     {
         label: "Datos Recogidos",
-        uri: "#",
+        uri: "/",
     },
     {
         label: "Nosotros",
-        uri: "/nosotros",
+        uri: "nosotros",
     },
     // {
     //     label: "Nosotros",
@@ -85,7 +85,7 @@ export const homeLinks = [
     // },
     {
         label: "Contacto",
-        uri: "#",
+        uri: "contacto",
     },
 ]
 

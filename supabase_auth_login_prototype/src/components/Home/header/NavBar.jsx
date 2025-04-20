@@ -12,13 +12,16 @@ export function NavbarHo() {
 
     const onToggle = () => setOpen(!isOpen);
     return (
-        <VStack w="full" gap={0}>
+        <VStack w="full" gap={0} >
             <HStack
                 w="full"
                 alignItems="center"
                 p={2}
                 justifyContent="space-between"
                 borderBottomWidth={1}
+                position="relative"
+                bg="bg"
+                shadow="md"
             >
                 {/* left content */}
                 <LeftContent items={homeLinks} onToggle={onToggle}/>

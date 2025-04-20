@@ -24,7 +24,8 @@ export function NavBarMob({ items, isOpen }) {
                         as={NavLink}
                         to="/login"
                         variant="solid"
-                        colorPalette="teal"
+                        bg={"#C9EF26"}
+                        color="#072C51"
                         size={"sm"}
                         borderRadius="2xl"
                     >
@@ -34,7 +35,9 @@ export function NavBarMob({ items, isOpen }) {
                         as={NavLink}
                         to="/register"
                         variant="outline"
-                        colorPalette="teal"
+                        borderWidth="2px"
+                        borderColor={"#C9EF26"}
+                        color={{base:"#072C51", _dark:"#C9EF26"}}
                         size={"sm"}
                         borderRadius="2xl"
                     >

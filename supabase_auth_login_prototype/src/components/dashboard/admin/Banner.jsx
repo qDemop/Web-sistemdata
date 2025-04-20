@@ -15,7 +15,247 @@ const Banner = () => {
                     transform: "scale(1.3)"
                 }}
                 filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
-                />
+            /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        /><Image
+            w="full"
+            h={{base:"80px", md:"100px", lg:"120px"}}
+            fit="cover"
+            align="center"
+            src="https://ladecana.pe/wp-content/uploads/2021/07/UNAJ-logra-la-creacion-de-tres-nuevas-carreras-profesionales-y-la-ampliacion-de-licenciamiento-institucional-2.jpeg"
+            alt="Dan Abramov"
+            transition="transform 0.3s ease-in-out"
+            _hover={{
+                transform: "scale(1.3)"
+            }}
+            filter={{ base: "brightness(85%)", _dark: "brightness(70%)" }}
+        />
         </Flex>
     )
 }

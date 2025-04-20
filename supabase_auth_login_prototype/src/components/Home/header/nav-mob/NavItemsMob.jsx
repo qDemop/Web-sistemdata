@@ -66,7 +66,7 @@ export function NavItemsMob ({ label, uri, subitems }) {
                 outline="none"
                 w="full"
                 display="block"
-                colorPalette="teal"
+                color={{base:"#072C51", _dark:"#C9EF26"}}
                 as={NavLink}
                 to={uri}
                 rounded="lg"

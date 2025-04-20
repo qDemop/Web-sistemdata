@@ -15,7 +15,7 @@ import {
     Image
 } from "@chakra-ui/react";
 import { Mail } from "lucide-react";
-import { Link as RouterLink } from "react-router-dom";
+import {Link as RouterLink, NavLink} from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -58,6 +58,8 @@ const Login = () => {
                 direction="column"
                 align="center">
                 <Box
+                    as={NavLink}
+                    to="/"
                     p={3}
                     borderRadius="full"
                     mb={1.5}
@@ -77,7 +79,7 @@ const Login = () => {
                     Inicia sesión para acceder a tu cuenta
                 </Text>
             </Flex>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} noValidate>
                 <Stack mt={10}>
                     <Field.Root>
                         <AuthInput

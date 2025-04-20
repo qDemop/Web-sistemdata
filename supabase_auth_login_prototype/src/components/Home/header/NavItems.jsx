@@ -22,8 +22,8 @@ export function NavItems ({label, uri, subitems}) {
                             _active={{color:"colorPalette.500", transform: "scale(0.95)"}}
                         >
                             {label} <Icon as={FaChevronDown} boxSize={4} mt="3px" style={{
-                                transition:"transform .2s ease 0s",
-                                transform: isOpen ? "rotate(-180deg)" : "",
+                            transition:"transform .2s ease 0s",
+                            transform: isOpen ? "rotate(-180deg)" : "",
                         }}/>
                         </Button>
                     </Popover.Trigger>
@@ -60,12 +60,31 @@ export function NavItems ({label, uri, subitems}) {
             <Button
                 as={NavLink}
                 to={uri}
-                color={{base:"#072C51", _dark:"#C9EF26"}}
+                color={{ base: '#072C51', _dark: '#C9EF26' }}
                 variant="ghost"
-                _active={{color:"colorPalette.500", transform: "scale(0.95)"}}
-                _hover={{textDecoration: 'none', bg:'colorPalette.50'}}
+                position="relative"
+                _active={{ color: '#00B5BB', transform: 'scale(0.95)' }}
+                _hover={{
+                    textDecoration: 'none',
+                    bg: 'none',
+                    _after: {
+                        width: '100%',
+                    },
+                }}
 
-            >{label}</Button>
+                _after={{
+                    content: '""',
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    width: '0%',
+                    height: '4px',
+                    background: 'linear-gradient(to right, #C9EF26, #00B5BB)',
+                    transition: 'width 0.3s ease-in-out',
+                }}
+            >
+                {label}
+            </Button>
         </List.Item>
     )
 }

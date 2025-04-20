@@ -1,14 +1,16 @@
 import { z } from "zod";
 
 export const loginSchema = z.object({
-    email: z.string().email("Correo electrónico no válido"),
+    email: z.string()
+        .nonempty ("El correo electrónico es requerido")
+        .email('Correo electrónico no válido'),
     password: z.string().min(6, "Mínimo 6 caracteres"),
 });
 
 export const registerSchema = z.object({
     email: z.string()
-        .email("El correo electrónico es requerido")
-        .regex(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,'Correo electrónico no válido'),
+        .nonempty ("El correo electrónico es requerido")
+        .email('Correo electrónico no válido'),
     password: z.string()
         .nonempty("Ingrese una contraseña")
         .min(6, "La contraseña debe tener al menos 6 caracteres")
