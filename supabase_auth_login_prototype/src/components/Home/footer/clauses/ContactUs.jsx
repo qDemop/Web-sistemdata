@@ -7,7 +7,7 @@ export function ContactUs({ items = []}) {
 
     return (
         <Box>
-            <Heading color={{base:"#00B5BB", _dark:"#CDF120    "}}>Contactanos</Heading>
+            <Heading color={{base:"#00B5BB", _dark:"#CDF120"}}>Contactanos</Heading>
             <Grid pt="40px" color="white">
                 <List.Root
                     justifyContent="center"

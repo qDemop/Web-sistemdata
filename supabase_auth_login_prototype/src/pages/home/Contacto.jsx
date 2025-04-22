@@ -1,13 +1,26 @@
-import {Box, Heading} from "@chakra-ui/react";
+import {Box, Flex, Container, Stack, Heading, Text, Image} from "@chakra-ui/react";
+import Concepts from "@/pages/home/nosotros/extras/Concepts.jsx";
 
 export function Contacto() {
-
-
     return (
-        <Box maxW="600px" mx="auto" mt={8} p={4} borderWidth="1px" borderRadius="lg" boxShadow="md">
-            <Heading>
-                CONTACTO
-            </Heading>
-        </Box>
-    );
+        <>
+            <Box bg="bg.subtle">
+                <Container maxW={1400}>
+                    <Flex my='50px' px={{ lg: '50px', base: '20px' }}  gap='30px' display={{ lg: 'flex', base: 'grid' }}>
+                        <Stack>
+                            <Box flexBasis='50%'>
+                                <Heading size='2xl' color={{base:"#072C51", _dark:"#CDF120    "}}>Envíanos un mensaje</Heading>
+                                <Text mt={5}> contentsdas of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</Text>
+                            </Box>
+                            <Box>
+                                <Image mx='auto' src='/PORTADA.png' alt='Us' />
+                            </Box>
+                        </Stack>
+                    </Flex>
+                </Container>
+
+            </Box>
+
+        </>
+    )
 }

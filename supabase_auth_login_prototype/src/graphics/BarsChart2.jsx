@@ -27,11 +27,14 @@ ChartJS.register(
 );
 
 const VARIABLES = {
-    T_P_SIN_POLVO: "Temperatura panel policristalino sin polvo",
-    T_M_SIN_POLVO: "Temperatura panel monocristalino sin polvo",
-    T_M_CON_POLVO: "Temperatura panel monocristalino con polvo",
-    T_P_CON_POLVO: "Temperatura panel policristalino con polvo",
-    T_AMBIENTE: "Temperatura ambiente",
+    V_P_SIN_POLVO: "Tensión panel policristalino sin polvo",
+    V_P_CON_POLVO: "Tensión panel policristalino con polvo",
+    V_M_SIN_POLVO: "Tensión panel monocristalino sin polvo",
+    V_M_CON_POLVO: "Tensión panel monocristalino con polvo",
+    I_P_SIN_POLVO: "Corriente panel policristalino sin polvo",
+    I_P_CON_POLVO: "Corriente panel policristalino con polvo",
+    I_M_SIN_POLVO: "Corriente panel monocristalino sin polvo",
+    I_M_CON_POLVO: "Corriente panel monocristalino con polvo",
 };
 
 const meses = [
@@ -51,7 +54,7 @@ const TemperaturasChart = () => {
     const [filtroMes, setFiltroMes] = useState("");
     const [filtroDia, setFiltroDia] = useState("");
     const [filtroHora, setFiltroHora] = useState("");
-    const [variableSeleccionada, setVariableSeleccionada] = useState("T_P_SIN_POLVO");
+    const [variableSeleccionada, setVariableSeleccionada] = useState("V_P_SIN_POLVO");
     const [tipoGrafico, setTipoGrafico] = useState("bar");
     const [darkMode, setDarkMode] = useState(false);
     const [mensaje, setMensaje] = useState("");
@@ -233,7 +236,7 @@ const TemperaturasChart = () => {
     return (
         <div style={baseStyle}>
             <h2 style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "16px" }}>
-                Gráfico de temperaturas de paneles con y sin polvo
+                Gráfico de tensión y corriente en paneles con y sin polvo
             </h2>
 
             <div style={{ marginBottom: "16px", display: "flex", flexWrap: "wrap", gap: "10px" }}>

@@ -1,11 +1,12 @@
 import {Button, Icon, Link, List, Popover, Portal} from "@chakra-ui/react";
-import {NavLink} from "react-router-dom";
+import {NavLink, useMatch} from "react-router-dom";
 import PropTypes from "prop-types";
 import {FaChevronDown} from "react-icons/fa";
 import {useState} from "react";
 
 
 export function NavItems ({label, uri, subitems}) {
+    const isActive = useMatch(uri);
     const [isOpen, setOpen] = useState(false)
     if (subitems){
         return (
@@ -77,7 +78,7 @@ export function NavItems ({label, uri, subitems}) {
                     position: 'absolute',
                     bottom: 0,
                     left: 0,
-                    width: '0%',
+                    width: isActive ? '100%' : '0%',
                     height: '4px',
                     background: 'linear-gradient(to right, #C9EF26, #00B5BB)',
                     transition: 'width 0.3s ease-in-out',

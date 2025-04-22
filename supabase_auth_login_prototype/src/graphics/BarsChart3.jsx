@@ -26,14 +26,6 @@ ChartJS.register(
     zoomPlugin
 );
 
-const VARIABLES = {
-    T_P_SIN_POLVO: "Temperatura panel policristalino sin polvo",
-    T_M_SIN_POLVO: "Temperatura panel monocristalino sin polvo",
-    T_M_CON_POLVO: "Temperatura panel monocristalino con polvo",
-    T_P_CON_POLVO: "Temperatura panel policristalino con polvo",
-    T_AMBIENTE: "Temperatura ambiente",
-};
-
 const meses = [
     "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
@@ -51,11 +43,12 @@ const TemperaturasChart = () => {
     const [filtroMes, setFiltroMes] = useState("");
     const [filtroDia, setFiltroDia] = useState("");
     const [filtroHora, setFiltroHora] = useState("");
-    const [variableSeleccionada, setVariableSeleccionada] = useState("T_P_SIN_POLVO");
     const [tipoGrafico, setTipoGrafico] = useState("bar");
     const [darkMode, setDarkMode] = useState(false);
     const [mensaje, setMensaje] = useState("");
     const chartRef = useRef(null);
+
+    const variableSeleccionada = "Irradiancia";
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -152,7 +145,7 @@ const TemperaturasChart = () => {
         labels,
         datasets: [
             {
-                label: VARIABLES[variableSeleccionada],
+                label: "Irradiancia",
                 data: dataValues,
                 fill: tipoGrafico === "line",
                 backgroundColor: (context) => {
@@ -233,7 +226,7 @@ const TemperaturasChart = () => {
     return (
         <div style={baseStyle}>
             <h2 style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "16px" }}>
-                Gráfico de temperaturas de paneles con y sin polvo
+                Gráfico de Irradiancia
             </h2>
 
             <div style={{ marginBottom: "16px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
@@ -258,10 +251,8 @@ const TemperaturasChart = () => {
                     ))}
                 </select>
 
-                <select style={selectStyle} value={variableSeleccionada} onChange={(e) => setVariableSeleccionada(e.target.value)}>
-                    {Object.keys(VARIABLES).map((key) => (
-                        <option key={key} value={key}>{VARIABLES[key]}</option>
-                    ))}
+                <select style={selectStyle} disabled>
+                    <option value="Irradiancia">Irradiancia</option>
                 </select>
 
                 <select style={selectStyle} value={tipoGrafico} onChange={(e) => setTipoGrafico(e.target.value)}>

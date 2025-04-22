@@ -15,7 +15,6 @@ export function FollowUs({ items = []}) {
                     variant="plain"
                     flexDirection={{base:"row", md:"row", lg:"column"}}
                     gap={1}
-
                 >
                     {items.map((item) => (
                         <NavItemsF key={item.label} {...item} />

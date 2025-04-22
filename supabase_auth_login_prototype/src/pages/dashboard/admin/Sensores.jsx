@@ -12,7 +12,6 @@ import { useForm } from "react-hook-form";
 import {DashInput} from "@/components/shared/inputs/CustomInput.jsx";
 import { sensorSchema} from "@/lib/validators.js";
 
-import {LiaAtSolid, LiaIdCardSolid, LiaUserEditSolid} from "react-icons/lia";
 import {IoDocumentTextOutline, IoSaveOutline} from "react-icons/io5";
 
 

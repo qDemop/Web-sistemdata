@@ -39,7 +39,7 @@ const SidebarUs = () => {
                     color={selected === "dashboard" ? "white" : "gray.200"}
                     onClick={() => navigate("dashboard")}
                     w="full"
-                    justifyContent="flex-start"
+
                     mt="3vh"
                 >
                     <FiGrid style={{ marginRight: "8px" }} />

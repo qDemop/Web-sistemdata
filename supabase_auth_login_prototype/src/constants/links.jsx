@@ -55,11 +55,11 @@ export const dashboardLinks = [
 export const homeLinks = [
     {
         label: "Inicio",
-        uri: "/",
+        uri: "inicio",
     },
     {
         label: "Datos Recogidos",
-        uri: "/",
+        uri: "data",
     },
     {
         label: "Nosotros",
@@ -93,7 +93,7 @@ export const footerLinks = [
 
     {
         label: "Home",
-        uri: "#",
+        uri: "/",
         icon:IoHomeSharp,
 
     },
@@ -112,7 +112,7 @@ export const footerLinks = [
 
     {
         label: "Contact",
-        uri: "#",
+        uri: "contacto",
         icon: MdPhoneInTalk,
     },
 

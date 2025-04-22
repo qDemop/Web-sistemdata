@@ -23,6 +23,7 @@ import Sensores from "@/pages/dashboard/public/Sensores.jsx";
 import SensoresAd from "@/pages/dashboard/admin/Sensores.jsx";
 import {AboutUsPage} from "@/pages/home/nosotros/AboutUs.jsx";
 import { Contacto } from "@/pages/home/Contacto.jsx";
+import {Datareal} from "@/pages/home/Datareal.jsx";
 
 
 export const router = createBrowserRouter([
@@ -33,7 +34,15 @@ export const router = createBrowserRouter([
         children:[
             {
                 index: true,
-                element: <Navigate to='/'/>,
+                element: <Navigate to='inicio'/>,
+            },
+            {
+                path: "inicio",
+                element: <Home />
+            },
+            {
+                path: "data",
+                element: <Datareal />
             },
             {
             path: "nosotros",
