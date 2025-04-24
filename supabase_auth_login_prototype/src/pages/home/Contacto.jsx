@@ -1,5 +1,4 @@
 import {Box, Flex, Container, Stack, Heading, Text, Image} from "@chakra-ui/react";
-import Concepts from "@/pages/home/nosotros/extras/Concepts.jsx";
 
 export function Contacto() {
     return (

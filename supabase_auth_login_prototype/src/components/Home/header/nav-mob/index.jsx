@@ -13,7 +13,7 @@ export function NavBarMob({ items, isOpen }) {
                     width="100%"
                     borderWidth={1}
                     padding={2}
-                    bg="bg.muted"
+                    bg={{base:"white", _dark:"#202021"}}
                     variant="plain"
                     display={{base: "flex", md: "none"}}
                 >

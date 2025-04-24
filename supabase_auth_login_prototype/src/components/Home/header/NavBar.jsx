@@ -20,7 +20,7 @@ export function NavbarHo() {
                 justifyContent="space-between"
                 borderBottomWidth={1}
                 position="relative"
-                bg="bg"
+                bg={{base:"white", _dark:"#202021"}}
                 shadow="md"
             >
                 {/* left content */}

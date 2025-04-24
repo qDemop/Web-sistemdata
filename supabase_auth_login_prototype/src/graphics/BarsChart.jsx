@@ -13,6 +13,7 @@ import {
     Legend,
 } from "chart.js";
 import zoomPlugin from "chartjs-plugin-zoom";
+import {Box} from "@chakra-ui/react";
 
 ChartJS.register(
     CategoryScale,
@@ -173,6 +174,7 @@ const TemperaturasChart = () => {
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         devicePixelRatio: 2,
         plugins: {
             legend: {
@@ -219,6 +221,7 @@ const TemperaturasChart = () => {
     const selectStyle = {
         border: "1px solid #ccc",
         padding: "5px 10px",
+        maxWeight: "5px",
         marginRight: "10px",
     };
 
@@ -231,12 +234,12 @@ const TemperaturasChart = () => {
     };
 
     return (
-        <div style={baseStyle}>
+        <Box bg="bg" px={4} w="full"  >
             <h2 style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "16px" }}>
                 Gráfico de temperaturas de paneles con y sin polvo
             </h2>
 
-            <div style={{ marginBottom: "16px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
+            <div style={{ marginBottom: "16px", display: "flex", flexWrap: "wrap", gap: "8px" }}>
                 <select style={selectStyle} value={filtroMes} onChange={(e) => { setFiltroMes(e.target.value); setFiltroDia(""); }}>
                     <option value="">Mes</option>
                     {meses.map((mes, idx) => (
@@ -281,9 +284,20 @@ const TemperaturasChart = () => {
             {loading && <p>Cargando datos...</p>}
             {mensaje && <p style={{ color: "red" }}>{mensaje}</p>}
             {!loading && datosFiltrados.length > 0 && (
-                <ChartComponent ref={chartRef} data={data} options={options} />
+
+                <Box
+                w="full"
+                h={{base: "300px", md: "400px", lg: "500px"}}
+            mx="auto"
+            my={4}
+            p={4}
+            borderRadius="lg"
+            boxShadow="md"
+        >
+            <ChartComponent ref={chartRef} data={data} options={options} />
+        </Box>
             )}
-        </div>
+        </Box>
     );
 };
 

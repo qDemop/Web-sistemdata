@@ -21,9 +21,9 @@ import Soporte from "@/pages/dashboard/public/Soporte.jsx";
 import {HomeLayout} from "@/layouts/Root/HomeLayout.jsx";
 import Sensores from "@/pages/dashboard/public/Sensores.jsx";
 import SensoresAd from "@/pages/dashboard/admin/Sensores.jsx";
-import {AboutUsPage} from "@/pages/home/nosotros/AboutUs.jsx";
 import { Contacto } from "@/pages/home/Contacto.jsx";
-import {Datareal} from "@/pages/home/Datareal.jsx";
+import {Datareal} from "@/pages/home/DataRe/Datareal.jsx";
+import {AboutUsPage} from "@/pages/home/AboutUs.jsx";
 
 
 export const router = createBrowserRouter([
