@@ -8,6 +8,7 @@ import supabase from "@/api/supabaseClient.js";
 import supabaseClient from "@/api/supabaseClient.js";
 import {Navigate} from "react-router"; supabaseClient
 import PropTypes from "prop-types";
+import Loader from "@/components/Loader.jsx";
 
 
 function Wrapper({ children, rolPermitido }) {
@@ -64,7 +65,7 @@ function Wrapper({ children, rolPermitido }) {
         verificarSesionYRol();
     }, [rolPermitido]);
 
-    if (loading) return <div>Cargando...</div>;
+    if (loading) return <Loader/>
 
     if (!autenticado) {return <Navigate to="/login" />;}
 

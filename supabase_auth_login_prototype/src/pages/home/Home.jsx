@@ -12,8 +12,12 @@ import {
     Card,
     VStack,
     Grid,
-    GridItem
+    GridItem,
+    Icon,
+    Avatar, IconButton
 } from "@chakra-ui/react";
+import {Fragment} from "react";
+import {TemperatureIcon} from "@/components/shared/icons.jsx";
 
 
 
@@ -43,27 +47,37 @@ function Home() {
 
     return (
 
-        <>
+        <Fragment>
             {/*inicio*/}
             <Box wight="100%" bg={{base: "#F4F4F6", _dark:"#2F2F30"}}>
 
-                <Container maxW={1400}>
+                <Container  maxW={1440}>
 
-                    <Flex gap="30px" my="100px" px={{ md: '30px', base: '20px' }} display={{ lg: 'flex', base: 'grid' }} alignItems="center">
+                    <Flex  mb="80px" px={{ base: '20px', md: "12px", lg:"22px" }} >
+                        <Grid
+                            w="full"
+                            templateColumns={{
+                                base: "repeat(1, 1fr)",
+                                md: "repeat(2, 1fr)"
+                            }}
+                            gap={{base: "0px", md: "15px"}}
+                            justifyContent="space-between"
+                            alignItems="center"
+                            justifyItems={{base: "center", md: "end"}}
+                        >
+                            <GridItem>
+                        <VStack gap={{base: 3, md: 6}}>
 
-                        <Box flexBasis="50%">
-
-                            <Heading as="h1" textStyle={{base: "4xl", md: "5xl", lg: "6xl"}} fontWeight="extrabold" color={{base:"#072C51", _dark:"white"}}>EXPLORA DATOS AMBIENTALES</Heading>
+                            <Heading mt={{base:"80px", md:"100px"}} as="h1" textStyle={{base: "4xl", md: "4xl", lg: "6xl"}} fontWeight="extrabold" color={{base:"#072C51", _dark:"white"}}>EXPLORA DATOS AMBIENTALES</Heading>
 
                             <Text
-                                mt={{base: 3, md: 6}}
                                 textStyle={{base: "lg", md: "2xl"}}
                                 fontWeight={350}
                                 color={{base:"gray.700", _dark:"white"}}
                             >
                                 Conoce, analiza y predice los datos ambientales de
                                 la ciudad de Juliaca.</Text>
-                            <HStack gap={4} mt={{base: 3, md: 7}}>
+                            <HStack gap={4} alignSelf="start">
                                 <Button
                                     as={Link}
                                     to="/login"
@@ -124,27 +138,56 @@ function Home() {
                                 </Button>
                             </HStack>
 
-                        </Box>
+                        </VStack>
+                        </GridItem>
 
-                        <Box flexBasis="65%">
+                            <GridItem>
 
-                            <Image w="full" src="/PORTADA.png" rounded="xl"/>
+                                <Box
+                                    pos="relative"
+                                    rounded="xl"
+                                    display="flex"
+                                    alignItems="flex-end"
+                                    h={{base:"470px", md: "380px", lg: "470px"}}
 
-                        </Box>
+                                >
 
+                                    <Image
+                                        maxW={{base:"470px", md: "380px", lg: "470px"}}
+                                        src="/FondoInicio2.png"
+                                        rounded="xl"
+                                        shadow="2px -1px 15px 0px var(--shadow-color)"
+                                        shadowColor={{base:"#2F2F30", _dark:"#C9EF26"}}
+                                    />
+                                        <Image
 
+                                            maxH={{base: "470px", md: "380px", lg: "470px"}}
+                                            src="/SujetoInicio.png"
+                                            rounded="xl"
+                                            position="absolute"
+                                            top="0"
+                                            left="0"
+                                            zIndex={2}
+                                        />
+
+                                </Box>
+
+                            </GridItem>
+                        </Grid>
 
                     </Flex>
 
                 </Container>
 
             </Box>
+
             {/*Separator*/}
-            <Box maxW="full" minH={{base:"40px", md:"50px"}} maxH="60xpx" bg="#CDF720" bgGradient="to-r" gradientFrom="#C9EF26" gradientTo="#00B5BB"></Box>
+            <Box maxW="full" minH={{base:"50px", md:"67px", lg:"77px"}} maxH="60xpx" bg="#CDF720" bgGradient="to-r" gradientFrom="#C9EF26" gradientTo="#00B5BB"><Icon size="lg" bg="transparent"><TemperatureIcon/></Icon></Box>
+
             {/*sensor info*/}
             <Box wight="100%" bg={{base: "#F4F4F6", _dark:"#252526"}}>
-                <Container maxW={1400}>
-                    <Flex my="100px" px={{ md: '30px', base: '20px' }} alignItems="center" justifyItems="center">
+                <Container maxW={1440}>
+                    <Flex my="100px" px={{ md: '25px', base: '20px' }} alignItems="center" justifyItems="center">
                         <VStack
                             gap={10}
                             w={"full"}
@@ -165,6 +208,37 @@ function Home() {
                                     <GridItem
                                         key={index}
                                     >
+                                        <Card.Root width="350px" gap="19px" p="35px">
+                                            <Card.Body gap="30px" p="0px">
+                                                    <Icon w="120px" h="120px" rounded="full" aria-label="Temperature" bg="bg.muted" >
+                                                        <Box p="20px">
+                                                        <TemperatureIcon/>
+                                                        </Box>
+                                                    </Icon>
+                                                <Card.Title>Nue Camp</Card.Title>
+                                            </Card.Body>
+                                            <Card.Footer p="0px">
+                                                <Button
+                                                    rounded="lg"
+                                                    textStyle={{ base: "sm", md: "md" }}
+                                                    color="white"
+                                                    border="none"
+                                                    w={{ base: "auto", md: "100px" }}
+                                                    bg="transparent"
+                                                    bgGradient="to-r"
+                                                    gradientFrom="#C9EF26"
+                                                    gradientTo="#00B5BB"
+                                                    _hover={{
+                                                        textDecoration: "none",
+                                                        shadow: "0px 0px 10px 1px var(--shadow-color)",
+                                                        shadowColor: "red/50",
+                                                        transform: "scale(1.05)",
+                                                    }}
+                                                >
+                                                    Explorar
+                                                </Button>
+                                            </Card.Footer>
+                                        </Card.Root>
                                     <Card.Root
                                         bg={{base: "white", _dark:"#F4F4F6/15"}}
                                         rounded="xl"
@@ -210,7 +284,7 @@ function Home() {
                     </Flex>
                 </Container>
             </Box>
-        </>
+        </Fragment>
 
     );
 

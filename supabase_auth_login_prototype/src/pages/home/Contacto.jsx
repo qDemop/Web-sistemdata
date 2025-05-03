@@ -4,7 +4,7 @@ export function Contacto() {
     return (
         <>
             <Box bg="bg.subtle">
-                <Container maxW={1400}>
+                <Container maxW={1440}>
                     <Flex my='50px' px={{ lg: '50px', base: '20px' }}  gap='30px' display={{ lg: 'flex', base: 'grid' }}>
                         <Stack>
                             <Box flexBasis='50%'>

@@ -18,7 +18,7 @@ export function Footer() {
     return (
 
         <Box bg={{base: "#E4E3E8", _dark:"#202021"}} >
-            <Container maxW={1300}>
+            <Container maxW={1480}>
                 <SimpleGrid textAlign={{lg:'start',base:'center'}} spacing='30px' py='60px' templateColumns={{base:'repeat(1, 1fr)', lg:'repeat(4, 1fr)'}}>
                     <Box >
                         <Heading  pb='20px' color={{base:"#00B5BB", _dark:"#CDF120    "}}>About us</Heading>

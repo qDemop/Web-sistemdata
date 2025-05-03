@@ -5,7 +5,7 @@ export function AboutUsPage() {
     return (
 <Fragment>
         <Box bg={{base: "#F4F4F6", _dark:"#2F2F30"}}>
-            <Container maxW={1400} >
+            <Container maxW={1440} >
                 <Flex gap={{base:"40px", md: "60px", lg:"80px"}} my="80px" px={{ md: '30px', base: '20px' }} display={{ lg: 'flex', base: 'grid' }} alignItems="center">
                     <Box flexBasis='50%'>
                             <Image mx='auto' src='/PORTADA.png' alt='Us' rounded="xl"/>
@@ -22,7 +22,7 @@ export function AboutUsPage() {
             </Container>
         </Box>
     <Box bg={{base: "white", _dark:"#2F2F30"}}>
-        <Container maxW={1400}  >
+        <Container maxW={1440}  >
             <Stack direction={{ base: "column", md: "row" }} align={{ base: "center", md: "stretch" }} justifyContent="space-around" px={{ md: '30px', base: '20px' }} my="80px"
             >
                 <Box minW="300px" maxW="400px">
