@@ -13,32 +13,45 @@ import {
     VStack,
     Grid,
     GridItem,
-    Icon,
-    Avatar, IconButton
+    Icon, Span,
 } from "@chakra-ui/react";
 import {Fragment} from "react";
-import {TemperatureIcon} from "@/components/shared/icons.jsx";
+import {
+    CorrienteIcon,
+    IrradianciaIcon,
+    ProximamenteIcon,
+    TemperatureIcon,
+    TensionIcon
+} from "@/components/shared/icons.jsx";
 
 
 
 const cardData = [
     {
         title: "TEMPERATURA",
-        imageSrc:
-            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-        imageAlt: "Green double couch with wooden legs",
+        icon: TemperatureIcon,
     },
     {
         title: "IRRADIANCIA",
-        imageSrc:
-            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-        imageAlt: "Green double couch with wooden legs",
+        icon: IrradianciaIcon,
     },
     {
         title: "TENSION",
-        imageSrc:
-            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-        imageAlt: "Green double couch with wooden legs",
+        icon: TensionIcon,
+    },
+    {
+        title: "CORRIENTE",
+        icon: CorrienteIcon,
+    },
+    {
+        title: "PROXIMAMENTE...",
+        icon: ProximamenteIcon,
+        disabled: true,
+    },
+    {
+        title: "PROXIMAMENTE...",
+        icon: ProximamenteIcon,
+        disabled: true,
     },
 
 ];
@@ -68,15 +81,18 @@ function Home() {
                             <GridItem>
                         <VStack gap={{base: 3, md: 6}}>
 
-                            <Heading mt={{base:"80px", md:"100px"}} as="h1" textStyle={{base: "4xl", md: "4xl", lg: "6xl"}} fontWeight="extrabold" color={{base:"#072C51", _dark:"white"}}>EXPLORA DATOS AMBIENTALES</Heading>
+                            <Heading lineHeight="1.5" mt={{base:"80px", md:"100px"}} as="h1" textStyle={{base: "4xl", md: "4xl", lg: "7xl"}} fontWeight="extrabold" color={{base:"#072C51", _dark:"white"}}>EXPLORA DATOS AMBIENTALES</Heading>
 
-                            <Text
+                            <Box w={{base:"400px", md:"full"}}
+                                 alignSelf="start"
+                            ><Text
+                                lineHeight="0.5"
                                 textStyle={{base: "lg", md: "2xl"}}
                                 fontWeight={350}
                                 color={{base:"gray.700", _dark:"white"}}
                             >
                                 Conoce, analiza y predice los datos ambientales de
-                                la ciudad de Juliaca.</Text>
+                                la ciudad de Juliaca.</Text></Box>
                             <HStack gap={4} alignSelf="start">
                                 <Button
                                     as={Link}
@@ -149,7 +165,11 @@ function Home() {
                                     display="flex"
                                     alignItems="flex-end"
                                     h={{base:"470px", md: "380px", lg: "470px"}}
-
+                                    transition="transform 0.3s ease-in-out"
+                                    _hover={{
+                                        textDecoration: "none",
+                                        transform: "scale(1.05)",
+                                    }}
                                 >
 
                                     <Image
@@ -160,7 +180,7 @@ function Home() {
                                         shadowColor={{base:"#2F2F30", _dark:"#C9EF26"}}
                                     />
                                         <Image
-
+                                            filter="dropShadow" dropShadow="0px 0px 10px rgba(0, 0, 0, 0.5)"
                                             maxH={{base: "470px", md: "380px", lg: "470px"}}
                                             src="/SujetoInicio.png"
                                             rounded="xl"
@@ -168,6 +188,7 @@ function Home() {
                                             top="0"
                                             left="0"
                                             zIndex={2}
+
                                         />
 
                                 </Box>
@@ -182,7 +203,7 @@ function Home() {
             </Box>
 
             {/*Separator*/}
-            <Box maxW="full" minH={{base:"50px", md:"67px", lg:"77px"}} maxH="60xpx" bg="#CDF720" bgGradient="to-r" gradientFrom="#C9EF26" gradientTo="#00B5BB"><Icon size="lg" bg="transparent"><TemperatureIcon/></Icon></Box>
+            <Box maxW="full" minH={{base:"50px", md:"67px", lg:"77px"}} maxH="60xpx" bg="#CDF720" bgGradient="to-r" gradientFrom="#C9EF26" gradientTo="#00B5BB"></Box>
 
             {/*sensor info*/}
             <Box wight="100%" bg={{base: "#F4F4F6", _dark:"#252526"}}>
@@ -192,11 +213,11 @@ function Home() {
                             gap={10}
                             w={"full"}
                         >
-                        <Heading as="h1" textStyle={{base: "4xl", md: "5xl", lg: "6xl"}} fontWeight="extrabold" color={{base:"#072C51", _dark:"white"}} alignSelf="start">EXPLORA</Heading>
+                        <Heading as="h1" textStyle={{base: "4xl", md: "5xl", lg: "7xl"}} fontWeight="extrabold" color={{base:"#072C51", _dark:"white"}} alignSelf="start">NUESTROS SERVICIOS</Heading>
                             <Grid
                                 w="full"
                                 gridTemplateColumns={{
-                                    base: "minmax(270px, 1fr)",
+                                    base: "repeat(2, 1fr)",
                                     md: "repeat(2, minmax(280px, 1fr))",
                                     lg: "repeat(3, minmax(280px, 1fr))"
                                 }}
@@ -208,14 +229,25 @@ function Home() {
                                     <GridItem
                                         key={index}
                                     >
-                                        <Card.Root width="350px" gap="19px" p="35px">
+                                        <Card.Root
+                                            bg={{base: "#e4e4e4", _dark:"#4c4c4d"}}
+                                            rounded="xl"
+                                            overflow="hidden"
+                                            transition="all 0.3s ease"
+                                            _hover={{
+                                                boxShadow: "lg",
+                                                transform: "translateY(-10px)",
+                                            }}
+                                            width={{base:"240px", md: "300px", lg:"290px", xl:"380px"}} gap="19px" p={{base:"30px", md:"35px"}}>
                                             <Card.Body gap="30px" p="0px">
-                                                    <Icon w="120px" h="120px" rounded="full" aria-label="Temperature" bg="bg.muted" >
-                                                        <Box p="20px">
-                                                        <TemperatureIcon/>
-                                                        </Box>
-                                                    </Icon>
-                                                <Card.Title>Nue Camp</Card.Title>
+                                                <Icon w="80px" h="80px" rounded="full" aria-label="Temperature" bg="white" p="13px">
+                                                    <Box>
+                                                        <Box as={card.icon}/>
+                                                    </Box>
+                                                </Icon>
+                                                <Card.Title opacity={card.disabled ? 0.6 : 1} fontWeight="bold" textStyle={{base:"xl", md:"2xl"}} color={{ base: "#072C51", _dark: "white" }}>
+                                                    {card.title}
+                                                </Card.Title>
                                             </Card.Body>
                                             <Card.Footer p="0px">
                                                 <Button
@@ -223,60 +255,24 @@ function Home() {
                                                     textStyle={{ base: "sm", md: "md" }}
                                                     color="white"
                                                     border="none"
-                                                    w={{ base: "auto", md: "100px" }}
+                                                    w={{ base: "auto", md: "120px" }}
+                                                    h={{ base: "40px", md: "50px" }}
                                                     bg="transparent"
                                                     bgGradient="to-r"
                                                     gradientFrom="#C9EF26"
                                                     gradientTo="#00B5BB"
                                                     _hover={{
                                                         textDecoration: "none",
-                                                        shadow: "0px 0px 10px 1px var(--shadow-color)",
-                                                        shadowColor: "red/50",
+                                                        shadow: "0px 7px 14px -1px var(--shadow-color)",
+                                                        shadowColor: {base:"#2F2F30/30", _dark:"#C9EF26/60"},
                                                         transform: "scale(1.05)",
                                                     }}
+                                                    disabled={card.disabled}
                                                 >
                                                     Explorar
                                                 </Button>
                                             </Card.Footer>
                                         </Card.Root>
-                                    <Card.Root
-                                        bg={{base: "white", _dark:"#F4F4F6/15"}}
-                                        rounded="xl"
-                                        maxW="xs"
-                                        overflow="hidden"
-                                        transition="all 0.3s ease"
-                                        _hover={{
-                                            boxShadow: "lg",
-                                            transform: "translateY(-10px)",
-                                        }}
-                                    >
-                                        <Image src={card.imageSrc} alt={card.imageAlt} />
-                                        <Card.Body gap="2">
-                                            <HStack alignItems="center" justifyContent="space-between">
-                                                <Card.Title color={{ base: "#072C51", _dark: "white" }}>
-                                                    {card.title}
-                                                </Card.Title>
-                                                <Button
-                                                    rounded="lg"
-                                                    textStyle={{ base: "sm", md: "md" }}
-                                                    color="white"
-                                                    border="none"
-                                                    w={{ base: "auto", md: "100px" }}
-                                                    bg="transparent"
-                                                    bgGradient="to-r"
-                                                    gradientFrom="#C9EF26"
-                                                    gradientTo="#00B5BB"
-                                                    _hover={{
-                                                        textDecoration: "none",
-                                                        shadow: "lg",
-                                                        transform: "scale(1.05)",
-                                                    }}
-                                                >
-                                                    Explorar
-                                                </Button>
-                                            </HStack>
-                                        </Card.Body>
-                                    </Card.Root>
                                     </GridItem>
                                 ))}
                         </Grid>

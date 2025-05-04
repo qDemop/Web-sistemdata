@@ -57,7 +57,7 @@ const AdminsForm = () => {
             <SimpleGrid w="full" columns={["2", null, "4"]}  columnGap={{base: "12px", md:"30px", lg:"70px"}} rowGap={{base: 3, md:5}}>
                 {/* Nombre */}
                 <DashInput register={register} name="nombre" errors={errors} placeholder="Nombre" label="Nombre" icon={LiaUserEditSolid }/>
-                <DashInput icon={LiaUserEditSolid } register={register} name="apellidos" errors={errors} placeholder="Apellidos" label="Apellidos"/>
+                <DashInput icon={LiaUserEditSolid} register={register} name="apellidos" errors={errors} placeholder="Apellidos" label="Apellidos"/>
                 <DashInput icon={LiaIdCardSolid } register={register} name="dni" errors={errors} placeholder="DNI" label="DNI"/>
                 <DashInput icon={LiaAtSolid } register={register} name="email" errors={errors} placeholder="Correo" label="Correo Electronico"/>
                 <DashInput
