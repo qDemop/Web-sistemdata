@@ -7,6 +7,7 @@ export function HomeLayout() {
 
     return (
         <Flex w="full"  minH="100dvh" spacing={0} display="grid" gridTemplateRows="auto 1fr auto" flexDirection="column">
+
             <NavbarHo />
             <Outlet/>
             <Footer  />

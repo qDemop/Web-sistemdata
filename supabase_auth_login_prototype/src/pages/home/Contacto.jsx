@@ -78,7 +78,7 @@ export function Contacto() {
                                         transform: "scale(1.05)",
                                     }}
                                 >
-                                    <Link to="/data">Enviar</Link>
+                                    Enviar
                                 </Button>
                         </VStack>
                         </Grid>

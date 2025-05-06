@@ -1,4 +1,4 @@
-import {HStack, VStack, useDisclosure, Flex} from "@chakra-ui/react";
+import {HStack, VStack, Box, Flex} from "@chakra-ui/react";
 import {LeftContent, RightContent} from "@/components/Home/header/Content.jsx";
 import {NavBarMob} from "@/components/Home/header/nav-mob/index.jsx";
 import {homeLinks} from "@/constants/links.jsx";
@@ -12,20 +12,22 @@ export function NavbarHo() {
 
     const onToggle = () => setOpen(!isOpen);
     return (
-        <VStack w="full" gap={0} >
+        <VStack w="full" gap={0}>
+            <Box w="full" h={{base:"52px", md:"56px"}} />
             <HStack
                 w="full"
                 alignItems="center"
                 justifyContent="center"
-                borderBottomWidth={1}
-                position="relative"
+                position="fixed"
+                zIndex={100}
                 bg={{base:"white", _dark:"#202021"}}
-                shadow="md"
+                shadow={isOpen ? "none" : "lg"}
+                p={2}
+
             >
                 <Flex w="full" maxW="1920px"
                       alignItems="center"
                       justifyContent="space-between"
-                      p={2}
                 >
                 {/* left content */}
                 <LeftContent items={homeLinks} onToggle={onToggle}/>

@@ -79,6 +79,7 @@ export function NavItems ({label, uri, subitems}) {
                     bottom: 0,
                     left: 0,
                     width: isActive ? '100%' : '0%',
+                    opacity: isActive ? 1 : 0.5,
                     height: '4px',
                     background: 'linear-gradient(to right, #C9EF26, #00B5BB)',
                     transition: 'width 0.3s ease-in-out',

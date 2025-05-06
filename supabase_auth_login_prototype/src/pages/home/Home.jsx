@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 import {
     Box,
@@ -13,7 +13,7 @@ import {
     VStack,
     Grid,
     GridItem,
-    Icon, Span,
+    Icon,
 } from "@chakra-ui/react";
 import {Fragment} from "react";
 import {
@@ -135,6 +135,8 @@ function Home() {
                                     Iniciar
                                 </Button>
                                 <Button
+                                    as={NavLink}
+                                    to="/data"
                                     rounded="lg"
                                     color="white"
                                     textStyle={{base: "md", md: "lg"}}
@@ -150,7 +152,7 @@ function Home() {
                                         transform: "scale(1.05)",
                                     }}
                                 >
-                                    <Link to="/data">Buscar</Link>
+                                    Buscar
                                 </Button>
                             </HStack>
 
@@ -251,6 +253,7 @@ function Home() {
                                             </Card.Body>
                                             <Card.Footer p="0px">
                                                 <Button
+                                                    asChild
                                                     rounded="lg"
                                                     textStyle={{ base: "sm", md: "md" }}
                                                     color="white"
@@ -267,9 +270,10 @@ function Home() {
                                                         shadowColor: {base:"#2F2F30/30", _dark:"#C9EF26/60"},
                                                         transform: "scale(1.05)",
                                                     }}
-                                                    disabled={card.disabled}
+                                                    data-disabled={card.disabled ? "" : undefined}
+                                                    onClick={(e) => card.disabled && e.preventDefault()}
                                                 >
-                                                    Explorar
+                                                    <Link to="/data">Explorar</Link>
                                                 </Button>
                                             </Card.Footer>
                                         </Card.Root>
