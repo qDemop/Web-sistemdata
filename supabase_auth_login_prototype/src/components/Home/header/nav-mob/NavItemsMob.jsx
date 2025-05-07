@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
 import {useState} from "react";
 
-export function NavItemsMob ({ label, uri, subitems }) {
+export function NavItemsMob ({ label, uri, subitems, onClick  }) {
     const [isOpen, setOpen] = useState(false)
     if(subitems) {
         return (
@@ -75,6 +75,7 @@ export function NavItemsMob ({ label, uri, subitems }) {
                 px={4}
                 py={2}
                 fontWeight="semibold"
+                onClick={onClick}
             >
                 {label}
             </Link>
@@ -89,6 +90,7 @@ NavItemsMob.propTypes = {
         label: PropTypes.string,
         uri: PropTypes.string,
     })),
+    onClick: PropTypes.func,
 };
 
 // const { isOpen, onToggle } = useDisclosure();

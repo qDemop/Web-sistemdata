@@ -2,7 +2,7 @@ import {HStack, VStack, Box, Flex} from "@chakra-ui/react";
 import {LeftContent, RightContent} from "@/components/Home/header/Content.jsx";
 import {NavBarMob} from "@/components/Home/header/nav-mob/index.jsx";
 import {homeLinks} from "@/constants/links.jsx";
-import {useState} from "react";
+import {Fragment, useState} from "react";
 
 
 
@@ -12,14 +12,18 @@ export function NavbarHo() {
 
     const onToggle = () => setOpen(!isOpen);
     return (
-        <VStack w="full" gap={0}>
+        <Fragment>
             <Box w="full" h={{base:"52px", md:"56px"}} />
+        <VStack w="full" gap={0}
+                position="fixed"
+                zIndex={100}
+                top={0}
+        >
             <HStack
                 w="full"
                 alignItems="center"
                 justifyContent="center"
-                position="fixed"
-                zIndex={100}
+
                 bg={{base:"white", _dark:"#202021"}}
                 shadow={isOpen ? "none" : "lg"}
                 p={2}
@@ -39,5 +43,7 @@ export function NavbarHo() {
         {/* mobile content */}
             <NavBarMob items={homeLinks} isOpen={isOpen} onToggle={onToggle}/>
         </VStack>
+        </Fragment>
+
     );
 }

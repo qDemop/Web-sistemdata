@@ -3,7 +3,12 @@ import {NavItemsMob} from "@/components/Home/header/nav-mob/NavItemsMob.jsx";
 import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
 
-export function NavBarMob({ items, isOpen }) {
+export function NavBarMob({ items, isOpen, onToggle  }) {
+
+    const abrirCerrar = () => {
+        onToggle(false); // O simplemente llamamos a onToggle para que cierre el menú
+    };
+
     return (
         <Collapsible.Root  style={{width: "100%"}} open={isOpen} >
             <Collapsible.Content>
@@ -18,7 +23,7 @@ export function NavBarMob({ items, isOpen }) {
                     display={{base: "flex", md: "none"}}
                 >
                     {items.map((item) => (
-                        <NavItemsMob key={item.label} {...item} />
+                        <NavItemsMob key={item.label} {...item} onClick={abrirCerrar}/>
                     ))}
                     <Button
                         as={NavLink}
@@ -28,6 +33,7 @@ export function NavBarMob({ items, isOpen }) {
                         color="#072C51"
                         size={"sm"}
                         borderRadius="2xl"
+                        onClick={abrirCerrar}
                     >
                         Iniciar Sesión
                     </Button>
@@ -40,6 +46,7 @@ export function NavBarMob({ items, isOpen }) {
                         color={{base:"#072C51", _dark:"#C9EF26"}}
                         size={"sm"}
                         borderRadius="2xl"
+                        onClick={abrirCerrar}
                     >
                         Registrarse
                     </Button>
@@ -53,6 +60,7 @@ export function NavBarMob({ items, isOpen }) {
 NavBarMob.propTypes = {
     items: PropTypes.array.isRequired,
     isOpen: PropTypes.bool.isRequired,
+    onToggle: PropTypes.func.isRequired,
 };
 
 
