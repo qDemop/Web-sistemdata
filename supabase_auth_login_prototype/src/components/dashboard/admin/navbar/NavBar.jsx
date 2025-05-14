@@ -69,7 +69,6 @@ const NavBar = () => {
             top={{base: "none", md: "0"}}
             bg="bg.muted"
             zIndex={{base: "none", md: "overlay"}}
-
         >
         <Flex
             bg="bg.panel"
@@ -78,9 +77,12 @@ const NavBar = () => {
             borderRadius="2xl"
             width="full"
             px={{base: 1, md: 3}}
+            overflow="auto"
         >
             <TextNav/>
-            <Flex width="60%" justifyContent="end" alignItems="center">
+            <Flex width="60%" justifyContent="end" alignItems="center"
+                  minW="180px"
+            >
                 <Search/>
                     <ClientOnly fallback={<Skeleton boxSize="8" />}>
                         <IconButton onClick={toggleColorMode} variant="ghost" size="sm" >

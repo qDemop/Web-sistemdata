@@ -1,11 +1,7 @@
 import { useState } from "react";
 import {
-    Box,
-    Container,
-    Heading,
-    Text,
     Button,
-    VStack, Flex, SimpleGrid, Wrap, HStack, Stack, Icon, Field, createListCollection,
+    VStack, Flex, SimpleGrid, Stack, Icon, createListCollection, HStack, Heading, Box, Input
 } from '@chakra-ui/react'
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -14,6 +10,8 @@ import {adminsSchema} from "@/lib/validators.js";
 
 import {LiaAtSolid, LiaIdCardSolid, LiaUserEditSolid} from "react-icons/lia";
 import {IoDocumentTextOutline, IoSaveOutline} from "react-icons/io5";
+import {LuDownload} from "react-icons/lu";
+import {TablesAd} from "@/pages/dashboard/admin/Administracion/TableAd.jsx";
 
 
 
@@ -72,7 +70,7 @@ const AdminsForm = () => {
                 />
 
             </SimpleGrid >
-                <Stack w="full" direction="row" justifyContent={{base:"center", md:"end"}}>
+                <Stack w="full" direction="row" justifyContent={{base:"center", md:"end"}} overflow="auto">
                     <Button
                         type="submit"
                         colorPalette="green"
@@ -110,14 +108,42 @@ const optionsForm = createListCollection({
     ],
 })
 
+const CompTable = () => {
+    return(
+        <Flex
+            bg="bg.panel"
+            direction="column"
+            p={5}
+            w="full"
+            borderRadius="2xl"
+        >
+            <VStack gap={4}>
+                <HStack justifyContent="space-between" w="full" p={4}>
+                    <Heading size="3xl" fontWeight="bold" color="text.title">
+                            Equipo Administrador
+                    </Heading>
+                    <HStack spaceX={2}>
+                        <Input placeholder="Buscar" colorPalette="red"/>
+                        <Button rounded="lg" colorPalette="blue">
+                            Descargar
+                            <Icon as={LuDownload} size="sm"/>
+                        </Button>
+                    </HStack>
+                </HStack>
+                <TablesAd/>
+            </VStack>
+        </Flex>
+    )
+}
 
-function Administracion () {
+function Index () {
 
     return (
         <VStack w="full">
             <AdminsForm/>
+            <CompTable/>
         </VStack>
     )
 }
 
-export default Administracion
+export default Index

@@ -13,17 +13,18 @@ import ProfileForm from "@/pages/profile/ProfileForm.jsx";
 import NotFound from "@/pages/errors/NotFound.jsx";
 import {AdminDashboardLayout} from "@/layouts/dashboard/admin/AdminDashboardLayout.jsx";
 import Login from "@/pages/auth/Login.jsx";
-import Administracion from "@/pages/dashboard/admin/Administracion.jsx";
+import Index from "@/pages/dashboard/admin/Administracion/index.jsx";
 import UserDashboardLayout from "@/layouts/dashboard/public/UserDashboardLayout.jsx";
 import Dash from "@/pages/dashboard/public/Dash.jsx";
 import Historial from "@/pages/dashboard/public/Historial.jsx";
 import Soporte from "@/pages/dashboard/public/Soporte.jsx";
 import {HomeLayout} from "@/layouts/Root/HomeLayout.jsx";
 import Sensores from "@/pages/dashboard/public/Sensores.jsx";
-import SensoresAd from "@/pages/dashboard/admin/Sensores.jsx";
+import SensoresAd from "@/pages/dashboard/admin/Sensores/index.jsx";
 import { Contacto } from "@/pages/home/Contacto.jsx";
 import {Datareal} from "@/pages/home/DataRe/Datareal.jsx";
 import {AboutUsPage} from "@/pages/home/AboutUs.jsx";
+import {UserAd} from "@/pages/dashboard/admin/Usuarios/index.jsx";
 
 
 export const router = createBrowserRouter([
@@ -76,11 +77,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "administracion",
-                element: <Administracion/>,
+                element: <Index/>,
             },
             {
                 path: "usuarios",
-                element: <h1>Usuarios</h1>,
+                element: <UserAd/>,
             },
             {
                 path: "sensores",

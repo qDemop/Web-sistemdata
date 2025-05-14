@@ -1,24 +1,20 @@
 import { useState } from "react";
 import {
-    Box,
-    Container,
     Heading,
-    Text,
     Button,
-    VStack, Flex, SimpleGrid, Wrap, HStack, Stack, Icon, Field, createListCollection,
+    VStack, Flex, SimpleGrid, HStack, Stack, Icon, createListCollection, Input,
 } from '@chakra-ui/react'
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import {DashInput} from "@/components/shared/inputs/CustomInput.jsx";
-import { sensorSchema} from "@/lib/validators.js";
+import {userSchema} from "@/lib/validators.js";
 
 import {IoDocumentTextOutline, IoSaveOutline} from "react-icons/io5";
+import {LuAtSign, LuDownload, LuPhone, LuUserPen} from "react-icons/lu";
+import {TablesUsu} from "@/pages/dashboard/admin/Usuarios/TablesUsu.jsx";
 
 
-
-
-
-const SensorForm = () => {
+const UserForm = () => {
     const [loading, setLoading] = useState("");
     const [error, setError] = useState("");
 
@@ -28,7 +24,7 @@ const SensorForm = () => {
         formState: { errors },
         control,
     } = useForm({
-        resolver: zodResolver(sensorSchema),
+        resolver: zodResolver(userSchema),
     });
 
 
@@ -55,27 +51,19 @@ const SensorForm = () => {
             <VStack gap={{base: 3, md:5}}>
                 <SimpleGrid w="full" columns={["2", null, "4"]}  columnGap={{base: "12px", md:"30px", lg:"70px"}} rowGap={{base: 3, md:5}}>
                     {/* Nombre */}
-                    <DashInput register={register} name="serie" errors={errors} placeholder="Serie" label="Serie" />
-                    <DashInput register={register} name="marca" errors={errors} placeholder="Marca" label="Marca"/>
+                    <DashInput register={register} name="nombre" errors={errors} placeholder="Nombre" label="Nombre" icon={LuUserPen }/>
+                    <DashInput icon={LuUserPen} register={register} name="apellidos" errors={errors} placeholder="Apellidos" label="Apellidos"/>
+                    <DashInput icon={LuAtSign} register={register} name="email" errors={errors} placeholder="Correo" label="Correo Electronico"/>
+                    <DashInput icon={LuPhone} register={register} name="phone" errors={errors} placeholder="Teléfono" label="Teléfono"/>
                     <DashInput
                         register={register}
-                        name="tipo"
+                        name="rol"
                         errors={errors}
-                        label="Tipo"
+                        label="Rol"
                         type="select"
                         control={control}
-                        placeholder="Seleccionar"
-                        options={tipoForm}
-                    />
-                    <DashInput
-                        register={register}
-                        name="estado"
-                        errors={errors}
-                        label="Estado"
-                        type="select"
-                        control={control}
-                        placeholder="Seleccionar"
-                        options={estadoForm}
+                        placeholder="Seleccionar rol"
+                        options={optionsForm}
                     />
 
 
@@ -110,31 +98,47 @@ const SensorForm = () => {
         </Flex>
     )
 }
-const tipoForm = createListCollection({
+const optionsForm = createListCollection({
     items: [
-        { label: "T_P_SIN_POLVO", value: "t_p_sin_polvo" },
-        { label: "T_M_SIN_POLVO", value: "t_m_sin_polvo" },
-        { label: "T_M_CON_POLVO", value: "t_m_con_polvo" },
-        { label: "T_P_CON_POLVO", value: "t_p_con_polvo" },
-        { label: "T_AMBIENTE", value: "t_ambiente" },
-    ],
-})
-const estadoForm = createListCollection({
-    items: [
-        { label: "Operativo", value: "operativo" },
-        { label: "Inactivo", value: "inactivo" },
-        { label: "Mantenimiento", value: "mantenimiento" },
+        { label: "Editor", value: "editor" },
+        { label: "Lector", value: "lector" },
     ],
 })
 
-
-function SensoresAd () {
-
-    return (
-        <VStack w="full">
-            <SensorForm/>
-        </VStack>
+const CompTable = () => {
+    return(
+        <Flex
+            bg="bg.panel"
+            direction="column"
+            p={5}
+            w="full"
+            borderRadius="2xl"
+        >
+            <VStack gap={4}>
+                <HStack justifyContent="space-between" w="full" p={4}>
+                    <Heading size="3xl" fontWeight="bold" color="text.title">
+                        Inventario de Sensores
+                    </Heading>
+                    <HStack spaceX={2}>
+                        <Input placeholder="Buscar" colorPalette="red"/>
+                        <Button rounded="lg" colorPalette="blue">
+                            Descargar
+                            <Icon as={LuDownload} size="sm"/>
+                        </Button>
+                    </HStack>
+                </HStack>
+                <TablesUsu/>
+            </VStack>
+        </Flex>
     )
 }
 
-export default SensoresAd
+export function UserAd () {
+
+    return (
+        <VStack w="full">
+            <UserForm/>
+            <CompTable/>
+        </VStack>
+    )
+}
