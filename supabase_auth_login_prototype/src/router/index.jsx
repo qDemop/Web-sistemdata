@@ -7,13 +7,11 @@ import Home from '@/pages/home/Home.jsx';
 import {createBrowserRouter, Navigate} from "react-router";
 import Register from "@/pages/auth/Register.jsx";
 import VerifyEmail from "@/pages/auth/VerifyEmail.jsx";
-import Dashboard from "@/pages/dashboard/admin/Dashboard.jsx";
 import Wrapper from "@/lib/Wrapper.jsx";
 import ProfileForm from "@/pages/profile/ProfileForm.jsx";
 import NotFound from "@/pages/errors/NotFound.jsx";
 import {AdminDashboardLayout} from "@/layouts/dashboard/admin/AdminDashboardLayout.jsx";
 import Login from "@/pages/auth/Login.jsx";
-import Index from "@/pages/dashboard/admin/Administracion/index.jsx";
 import UserDashboardLayout from "@/layouts/dashboard/public/UserDashboardLayout.jsx";
 import Dash from "@/pages/dashboard/public/Dash.jsx";
 import Historial from "@/pages/dashboard/public/Historial.jsx";
@@ -25,6 +23,8 @@ import { Contacto } from "@/pages/home/Contacto.jsx";
 import {Datareal} from "@/pages/home/DataRe/Datareal.jsx";
 import {AboutUsPage} from "@/pages/home/AboutUs.jsx";
 import {UserAd} from "@/pages/dashboard/admin/Usuarios/index.jsx";
+import DashAdmin from "@/pages/dashboard/admin/Dashboard/index.jsx";
+import AdmAdmin from "@/pages/dashboard/admin/Administracion/index.jsx";
 
 
 export const router = createBrowserRouter([
@@ -59,11 +59,11 @@ export const router = createBrowserRouter([
     {path:"/login", element: <Login/>},
     {path:"/register", element: <Register/>},
     {path:"/verify-email", element: <VerifyEmail/>},
-    //{path:"/dashboard", element: <Wrapper><Dashboard/></Wrapper>},
+    //{path:"/dashboard", element: <Wrapper><Index/></Wrapper>},
     //{path:"/profile", element: <Wrapper><ProfileForm/></Wrapper>},
     {path:"*", element: <NotFound/>},
 
-    //Dashboard Admin
+    //Index Admin
     {
         path: "/admin",
         element: <Wrapper rolPermitido="Administrador"><AdminDashboardLayout/></Wrapper>,
@@ -73,11 +73,11 @@ export const router = createBrowserRouter([
         },
             {
                 path: 'dashboard',
-                element: <Dashboard/>,
+                element: <DashAdmin/>,
             },
             {
                 path: "administracion",
-                element: <Index/>,
+                element: <AdmAdmin/>,
             },
             {
                 path: "usuarios",
@@ -101,7 +101,7 @@ export const router = createBrowserRouter([
             }
             ]},
 
-    //Dashboard Public
+    //Index Public
     {
         path: "/user",
         element: <Wrapper rolPermitido="Registrado"><UserDashboardLayout/></Wrapper>,

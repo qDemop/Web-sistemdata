@@ -65,10 +65,7 @@ const NavBar = () => {
             py={{base: "13.2px", md: "8px"}}
             minH={{base: "63.2px", md: "64px"}}
             w="full"
-            position={{base: "none", md: "sticky"}}
-            top={{base: "none", md: "0"}}
             bg="bg.muted"
-            zIndex={{base: "none", md: "overlay"}}
         >
         <Flex
             bg="bg.panel"

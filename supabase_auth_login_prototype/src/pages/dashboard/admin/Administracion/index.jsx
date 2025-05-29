@@ -136,7 +136,7 @@ const CompTable = () => {
     )
 }
 
-function Index () {
+function AdmAdmin () {
 
     return (
         <VStack w="full">
@@ -146,4 +146,4 @@ function Index () {
     )
 }
 
-export default Index
+export default AdmAdmin

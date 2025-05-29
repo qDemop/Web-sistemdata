@@ -119,7 +119,7 @@ export const DashInput = ({
                     <Select.Root
                         name={field.name}
                         value={field.value}
-                        onValueChange={({ value }) => field.onChange(value)}
+                        onValueChange={( {value} ) => field.onChange(value)}
                         onInteractOutside={() => field.onBlur()}
                         collection={options}>
                         <Select.HiddenSelect />

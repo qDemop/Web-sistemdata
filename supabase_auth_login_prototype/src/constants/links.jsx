@@ -9,7 +9,7 @@ import {HiUserGroup} from "react-icons/hi";
 export const dashboardLinks = [
     {
         type: "link",
-        label: "Dashboard",
+        label: "Index",
         title: "Bienvenido",
         icon: TbLayoutDashboardFilled,
         path: "dashboard",
